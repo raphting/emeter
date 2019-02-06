@@ -20,6 +20,11 @@ Configuration
 * Path: /metrics
 * Metric: `emeter_pwr_delivered` current energy consumption
 
+Cross compile to Raspberry Pi
+------------------------------
+
+My Pi runs and ARM7, so compilation on my Intel based PC is done with `GOARCH=arm GOARM=7 go build -o emeter main.go`
+
 Documentation
 -------------
 
