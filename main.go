@@ -51,7 +51,9 @@ func readData() {
 
 		if res := r.FindStringSubmatch(fulltext); res != nil {
 			globalPage = fmt.Sprintf(
-				"# HELP emeter_pwr_delivered Actual electricity power delivered.\n# TYPE emeter_pwr_delivered gauge\nemeter_pwr_delivered %s", res[1])
+				`# HELP emeter_pwr_delivered Actual electricity power delivered.
+# TYPE emeter_pwr_delivered gauge
+emeter_pwr_delivered %s`, res[1])
 		}
 	}
 }
